@@ -1,6 +1,6 @@
 {
   "name": "waf-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A middleware to protect against SQL Injection, XSS, and invalid input in Express/NestJS apps.",
   "main": "index.js",
   "types": "index.d.ts",
