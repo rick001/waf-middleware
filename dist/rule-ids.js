@@ -19,4 +19,3 @@ function ruleIdForRuleName(rule) {
     }
     return 'WAF-UNK-001';
 }
-//# sourceMappingURL=rule-ids.js.map

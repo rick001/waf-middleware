@@ -1,0 +1,40 @@
+# Source (compiled output is published)
+src/
+
+# Development and tooling
+.github/
+scripts/
+agent-transcripts/
+
+# Local/editor/system
+.cursor/
+.vscode/
+.idea/
+.DS_Store
+*.log
+tmp/
+
+# Environment and local config
+.env
+.npmrc
+
+# Tests and reports
+coverage/
+.nyc_output/
+
+# TypeScript project files not needed in package
+tsconfig.json
+
+# Keep package tarball clean
+*.tgz
+
+# Do not publish installed/build artifacts from examples
+examples/**/node_modules/
+examples/**/dist/
+
+# Keep package lean: exclude compiled tests and maps
+dist/**/__tests__/**
+dist/**/*.test.d.ts
+dist/**/*.test.js
+dist/**/*.test.js.map
+dist/**/*.map

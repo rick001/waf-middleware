@@ -17,4 +17,3 @@ function looksLikePathTraversal(path) {
         return false;
     return PATH_TRAVERSAL_PATTERNS.some((p) => p.test(path));
 }
-//# sourceMappingURL=path-traversal.js.map

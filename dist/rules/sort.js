@@ -30,4 +30,3 @@ function checkSortValidation(query, opts) {
     }
     return { block: false };
 }
-//# sourceMappingURL=sort.js.map

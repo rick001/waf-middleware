@@ -4,10 +4,26 @@
   "description": "Node.js WAF-style request hardening for Express, NestJS, and Fastify: SQLi/XSS/path traversal heuristics, policies, audit events, and optional sanitize mode.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "docs/",
+    "examples/README.md",
+    "examples/*/README.md",
+    "examples/*/package.json",
+    "examples/*/server.cjs",
+    "examples/*/server.mjs",
+    "examples/*/tsconfig.json",
+    "examples/*/src/**",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
   "scripts": {
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "build:test": "npm run clean && tsc -p tsconfig.json",
     "prepare": "npm run build",
-    "test": "npm run build && node --test \"dist/**/*.test.js\"",
+    "test": "npm run build:test && node --test \"dist/**/*.test.js\"",
     "bench:ci": "npm run build && node scripts/perf-gate.mjs"
   },
   "peerDependencies": {

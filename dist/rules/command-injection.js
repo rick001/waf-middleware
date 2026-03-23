@@ -78,4 +78,3 @@ function scanBody(body, skipKeys, limits, counters) {
     }
     return false;
 }
-//# sourceMappingURL=command-injection.js.map

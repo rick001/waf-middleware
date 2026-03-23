@@ -32,4 +32,3 @@ Object.defineProperty(exports, "WafPolicy", { enumerable: true, get: function ()
 Object.defineProperty(exports, "WAF_POLICY_KEY", { enumerable: true, get: function () { return waf_policy_decorator_1.WAF_POLICY_KEY; } });
 var waf_policy_guard_1 = require("./nest/waf-policy.guard");
 Object.defineProperty(exports, "WafPolicyGuard", { enumerable: true, get: function () { return waf_policy_guard_1.WafPolicyGuard; } });
-//# sourceMappingURL=index.js.map

@@ -59,4 +59,3 @@ exports.WafPolicyGuard = WafPolicyGuard = __decorate([
     __param(0, (0, common_1.Inject)(waf_module_1.WAF_MODULE_OPTIONS)),
     __metadata("design:paramtypes", [Object, core_1.Reflector])
 ], WafPolicyGuard);
-//# sourceMappingURL=waf-policy.guard.js.map

@@ -16,4 +16,3 @@ function resolveInspectionLimits(partial) {
         maxObjectKeys: (_c = partial === null || partial === void 0 ? void 0 : partial.maxObjectKeys) !== null && _c !== void 0 ? _c : exports.DEFAULT_INSPECTION_LIMITS.maxObjectKeys,
     };
 }
-//# sourceMappingURL=limits.js.map
