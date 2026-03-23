@@ -1,6 +1,6 @@
 import express from 'express';
 import { apiLoggerExpress } from 'api-logger-mongodb';
-import { WafMiddleware } from 'http-waf-middleware';
+import { WafMiddleware } from '@rick001/http-waf-middleware';
 
 const app = express();
 app.use(express.json({ limit: '1mb' }));
@@ -56,7 +56,7 @@ app.use(
         traceId,
         security: {
           waf: {
-            package: 'http-waf-middleware',
+            package: '@rick001/http-waf-middleware',
             policyVersion: 'example-1.0.0',
             rulesetVersion: '2026.03-example',
           },

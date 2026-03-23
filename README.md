@@ -1,6 +1,6 @@
 # HTTP WAF middleware
 
-[![npm version](https://badge.fury.io/js/http-waf-middleware.svg)](https://www.npmjs.com/package/http-waf-middleware)
+[![npm version](https://badge.fury.io/js/@rick001/http-waf-middleware.svg)](https://www.npmjs.com/package/@rick001/http-waf-middleware)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 A **request hardening and input validation middleware** for **NestJS/Express.js**, with schema-friendly validation hooks, sanitization, suspicious-input detection, and security integrations. It helps detect and harden against malicious input patterns (including SQLi/XSS-like payloads), but it is **not** a complete defense on its own.
@@ -66,7 +66,7 @@ yarn add http-waf-middleware
 ```typescript
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { WafMiddleware } from 'http-waf-middleware';
+import { WafMiddleware } from '@rick001/http-waf-middleware';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -80,7 +80,7 @@ bootstrap();
 
 ```typescript
 import express from 'express';
-import { WafMiddleware } from 'http-waf-middleware';
+import { WafMiddleware } from '@rick001/http-waf-middleware';
 
 const app = express();
 const waf = new WafMiddleware();
@@ -91,7 +91,7 @@ app.listen(3000);
 ### With options (production)
 
 ```typescript
-import { WafMiddleware, WafOptions } from 'http-waf-middleware';
+import { WafMiddleware, WafOptions } from '@rick001/http-waf-middleware';
 
 const options: WafOptions = {
   sqlInjection: {
@@ -157,7 +157,7 @@ app.use((req, res, next) => waf.use(req, res, next));
 
 ```typescript
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
-import { WafModule, WafMiddleware } from 'http-waf-middleware';
+import { WafModule, WafMiddleware } from '@rick001/http-waf-middleware';
 
 @Module({
   imports: [WafModule.forRoot({ mode: 'monitor', policyVersion: '1.0.0' /* ... */ })],
@@ -176,7 +176,7 @@ export class AppModule implements NestModule {
 ```typescript
 import { Module } from '@nestjs/common';
 import { APP_GUARD } from '@nestjs/core';
-import { WafModule, WafPolicyGuard, WafPolicy } from 'http-waf-middleware';
+import { WafModule, WafPolicyGuard, WafPolicy } from '@rick001/http-waf-middleware';
 
 @Module({
   imports: [WafModule.forRoot({ sqlInjection: { enabled: true } })],
@@ -196,7 +196,7 @@ Path-only overrides without a guard: keep using `WafMiddleware` + `WafOptions.po
 
 ```typescript
 import Fastify from 'fastify';
-import { createFastifyWafPreHandler } from 'http-waf-middleware';
+import { createFastifyWafPreHandler } from '@rick001/http-waf-middleware';
 
 const app = Fastify();
 app.addHook('preHandler', createFastifyWafPreHandler({ sqlInjection: { enabled: true } }));
@@ -248,7 +248,7 @@ app.use(new WafMiddleware(wafOptions).use);
 **Express:** Run your schema validator first, then WAF. Use `createRequestHardeningStack` to combine them:
 
 ```typescript
-import { createRequestHardeningStack } from 'http-waf-middleware';
+import { createRequestHardeningStack } from '@rick001/http-waf-middleware';
 import { z } from 'zod'; // or Yup, Joi, etc.
 
 const bodySchema = z.object({ name: z.string().max(100), email: z.string().email() });

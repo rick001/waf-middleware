@@ -9,6 +9,6 @@
   "dependencies": {
     "api-logger-mongodb": "^1.1.1",
     "express": "^4.18.2",
-    "http-waf-middleware": "file:../.."
+    "@rick001/http-waf-middleware": "file:../.."
   }
 }

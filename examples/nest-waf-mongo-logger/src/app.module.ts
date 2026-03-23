@@ -1,7 +1,7 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { APP_GUARD } from '@nestjs/core';
 import { createApiLoggerMiddleware } from 'api-logger-mongodb';
-import { WafModule, WafPolicyGuard } from 'http-waf-middleware';
+import { WafModule, WafPolicyGuard } from '@rick001/http-waf-middleware';
 import { AppController } from './app.controller';
 
 @Module({
@@ -42,7 +42,7 @@ export class AppModule implements NestModule {
               traceId,
               security: {
                 waf: {
-                  package: 'http-waf-middleware',
+                  package: '@rick001/http-waf-middleware',
                   policyVersion: 'nest-example-1.0.0',
                   rulesetVersion: '2026.03-example',
                 },

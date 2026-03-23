@@ -16,7 +16,7 @@ Register **after** parsers (`@fastify/formbody`, `@fastify/multipart` as needed)
 
 ```typescript
 import Fastify from 'fastify';
-import { createFastifyWafPreHandler } from 'http-waf-middleware';
+import { createFastifyWafPreHandler } from '@rick001/http-waf-middleware';
 
 const app = Fastify();
 app.addHook('preHandler', createFastifyWafPreHandler({

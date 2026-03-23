@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const { WafMiddleware } = require('http-waf-middleware');
+const { WafMiddleware } = require('@rick001/http-waf-middleware');
 
 const app = express();
 app.use(express.json());

@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { WafPolicy } from 'http-waf-middleware';
+import { WafPolicy } from '@rick001/http-waf-middleware';
 
 @Controller()
 export class AppController {

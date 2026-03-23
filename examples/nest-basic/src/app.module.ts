@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { APP_GUARD } from '@nestjs/core';
-import { WafModule, WafPolicyGuard } from 'http-waf-middleware';
+import { WafModule, WafPolicyGuard } from '@rick001/http-waf-middleware';
 import { AppController } from './app.controller';
 
 @Module({

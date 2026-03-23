@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "fastify": "^5.0.0",
-    "http-waf-middleware": "file:../.."
+    "@rick001/http-waf-middleware": "file:../.."
   }
 }
