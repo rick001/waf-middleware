@@ -41,7 +41,7 @@ See [docs/FASTIFY.md](../docs/FASTIFY.md).
 
 ## Express + Mongo logger (`express-waf-mongo-logger`)
 
-Integrates `node-waf-middleware` with [`api-logger-mongodb`](https://www.npmjs.com/package/api-logger-mongodb), including log enrichment via `getUserInfo` and `transformLog`.
+Integrates `http-waf-middleware` with [`api-logger-mongodb`](https://www.npmjs.com/package/api-logger-mongodb), including log enrichment via `getUserInfo` and `transformLog`.
 
 ```bash
 cd examples/express-waf-mongo-logger
@@ -52,7 +52,7 @@ MONGO_URI="mongodb://127.0.0.1:27017" node server.mjs
 
 ## Nest + Mongo logger (`nest-waf-mongo-logger`)
 
-Integrates `WafPolicyGuard` (`node-waf-middleware`) with [`api-logger-mongodb`](https://www.npmjs.com/package/api-logger-mongodb) using `createApiLoggerMiddleware`, `getUserInfo`, and `transformLog`.
+Integrates `WafPolicyGuard` (`http-waf-middleware`) with [`api-logger-mongodb`](https://www.npmjs.com/package/api-logger-mongodb) using `createApiLoggerMiddleware`, `getUserInfo`, and `transformLog`.
 
 ```bash
 cd examples/nest-waf-mongo-logger

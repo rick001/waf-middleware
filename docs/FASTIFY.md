@@ -5,7 +5,7 @@ The package exposes **`createFastifyWafPreHandler(options?)`**, an async `preHan
 ## Install
 
 ```bash
-npm install node-waf-middleware fastify
+npm install http-waf-middleware fastify
 ```
 
 `fastify` is an **optional peer** — only needed if you use this hook.
@@ -16,7 +16,7 @@ Register **after** parsers (`@fastify/formbody`, `@fastify/multipart` as needed)
 
 ```typescript
 import Fastify from 'fastify';
-import { createFastifyWafPreHandler } from 'node-waf-middleware';
+import { createFastifyWafPreHandler } from 'http-waf-middleware';
 
 const app = Fastify();
 app.addHook('preHandler', createFastifyWafPreHandler({

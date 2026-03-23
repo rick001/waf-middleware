@@ -2,7 +2,7 @@
 
 This example combines:
 
-- `node-waf-middleware` via `WafModule` + `WafPolicyGuard`
+- `http-waf-middleware` via `WafModule` + `WafPolicyGuard`
 - `api-logger-mongodb` via `createApiLoggerMiddleware`
 
 It enriches Mongo rows using:

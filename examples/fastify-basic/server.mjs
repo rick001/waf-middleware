@@ -1,5 +1,5 @@
 import Fastify from 'fastify';
-import { createFastifyWafPreHandler } from 'node-waf-middleware';
+import { createFastifyWafPreHandler } from 'http-waf-middleware';
 
 const app = Fastify({ logger: true });
 

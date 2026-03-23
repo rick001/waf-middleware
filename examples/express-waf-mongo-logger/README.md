@@ -2,7 +2,7 @@
 
 This example integrates:
 
-- `node-waf-middleware` for input hardening/blocking
+- `http-waf-middleware` for input hardening/blocking
 - `api-logger-mongodb` for request/response logging to MongoDB
 
 It demonstrates enriching Mongo rows via:
