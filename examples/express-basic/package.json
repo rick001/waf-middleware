@@ -1,0 +1,12 @@
+{
+  "name": "waf-example-express-basic",
+  "private": true,
+  "description": "Minimal Express app with WafMiddleware",
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-waf-middleware": "file:../.."
+  }
+}

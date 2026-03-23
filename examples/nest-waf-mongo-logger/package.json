@@ -1,0 +1,22 @@
+{
+  "name": "waf-example-nest-mongo-logger",
+  "private": true,
+  "description": "Nest example with WafPolicyGuard + api-logger-mongodb enrichment",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.10",
+    "@nestjs/core": "^11.0.10",
+    "@nestjs/platform-express": "^11.0.10",
+    "api-logger-mongodb": "^1.1.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "node-waf-middleware": "file:../.."
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,31 +1,55 @@
 {
-  "name": "waf-middleware-express",
-  "version": "1.0.3",
-  "description": "A middleware to protect against SQL Injection, XSS, and invalid input in Express/NestJS apps.",
+  "name": "node-waf-middleware",
+  "version": "1.6.0",
+  "description": "Node.js WAF-style request hardening for Express, NestJS, and Fastify: SQLi/XSS/path traversal heuristics, policies, audit events, and optional sanitize mode.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && node --test \"dist/**/*.test.js\"",
+    "bench:ci": "npm run build && node scripts/perf-gate.mjs"
+  },
+  "peerDependencies": {
+    "fastify": "^4.0.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "fastify": {
+      "optional": true
+    }
   },
   "keywords": [
     "waf",
     "middleware",
     "security",
+    "request-hardening",
+    "node-waf",
+    "api-security",
+    "input-validation",
     "sql-injection",
     "xss",
+    "path-traversal",
+    "command-injection",
+    "sanitize",
+    "audit-logging",
     "express",
-    "nestjs"
+    "nestjs",
+    "fastify",
+    "owasp",
+    "web-security",
+    "nodejs"
   ],
   "author": "Sayantan Roy",
   "license": "MIT",
   "dependencies": {
     "@nestjs/common": "^11.0.10",
+    "@nestjs/core": "^11.0.10",
     "express": "^4.18.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
     "typescript": "^5.7.3"
   },
   "repository": {

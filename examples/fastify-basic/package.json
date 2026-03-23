@@ -1,0 +1,13 @@
+{
+  "name": "waf-example-fastify-basic",
+  "private": true,
+  "description": "Minimal Fastify app with WAF preHandler",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "node-waf-middleware": "file:../.."
+  }
+}

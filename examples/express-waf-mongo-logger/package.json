@@ -1,0 +1,14 @@
+{
+  "name": "waf-example-express-mongo-logger",
+  "private": true,
+  "description": "Express example with WAF + api-logger-mongodb enrichment",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "api-logger-mongodb": "^1.1.1",
+    "express": "^4.18.2",
+    "node-waf-middleware": "file:../.."
+  }
+}

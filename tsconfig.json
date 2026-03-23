@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "ES6", // Compile to ES6 for modern Node.js environments
     "module": "commonjs", // Use CommonJS modules for Node.js compatibility
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "outDir": "./dist", // Output compiled files to the "dist" folder
     "rootDir": "./src", // Specify the root directory for your source files
     "strict": true, // Enable strict type-checking

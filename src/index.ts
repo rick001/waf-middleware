@@ -1,0 +1,41 @@
+export { WafMiddleware } from './waf.middleware';
+export { runWafOnRequest } from './waf-engine';
+export { resolveEffectiveWafOptions } from './resolve-effective-options';
+export type { WafHttpContext } from './resolve-effective-options';
+export {
+  createFastifyWafPreHandler,
+  createFastifyWafPreHandlerWithMerge,
+} from './fastify-waf';
+export type { WafFastifyRequest, WafFastifyReply } from './fastify-waf';
+export { RULESET_VERSION } from './ruleset-manifest';
+export { createRequestHardeningStack } from './stack';
+export type { SchemaValidatorMiddleware, RequestHardeningStackOptions } from './stack';
+export type {
+  WafOptions,
+  SqlInjectionOptions,
+  XssOptions,
+  SortValidationOptions,
+  Sensitivity,
+  RoutePolicy,
+  RoutePolicyMatch,
+  RequestLike,
+  PolicyRequestContext,
+} from './config';
+export { RULE_IDS, ruleIdForRuleName } from './rule-ids';
+export type { WafRuleName } from './rule-ids';
+export { mergeOptions, mergeResolvedWafOptions, resolvePolicyForRequest } from './config';
+export type {
+  WafMode,
+  WafAuditEvent,
+  MetricsHooks,
+  QueryDecodeOptions,
+  PathTraversalOptions,
+  CommandInjectionOptions,
+  ResolvedWafOptions,
+  ResolvedXssOptions,
+} from './config';
+export type { InspectionLimits } from './limits';
+export { DEFAULT_INSPECTION_LIMITS, resolveInspectionLimits } from './limits';
+export { WafModule, WAF_MODULE_OPTIONS } from './nest/waf.module';
+export { WafPolicy, WAF_POLICY_KEY } from './nest/waf-policy.decorator';
+export { WafPolicyGuard } from './nest/waf-policy.guard';
