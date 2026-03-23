@@ -24,6 +24,21 @@ Use this middleware as **one layer** in a broader defense-in-depth strategy, not
 
 ---
 
+## When To Use
+
+- You run **public APIs** and want to reject obvious malicious payloads before controller/DB logic.
+- You need a **safe rollout** path (`monitor` first, then `block`).
+- You want **structured audit signals** (`rule`, `ruleId`, `mode`, versions) for incident triage.
+- You need **per-route/per-request policy control** (`policies`, `policyResolver`) in multi-tenant apps.
+
+## When Not To Use (alone)
+
+- You need a **full edge WAF** (managed bot mitigation, DDoS scrubbing, geo/rate controls).
+- You need guaranteed prevention without proper **parameterized queries** and output encoding.
+- You expect this package to replace authN/authZ, CSP, CSRF, or rate limiting.
+
+---
+
 ## Features
 
 - **SQLi signal detection** – Heuristic patterns for obvious injection; does **not** replace parameterized queries. See [docs/ORM_EXAMPLES.md](docs/ORM_EXAMPLES.md).
@@ -121,6 +136,22 @@ app.use((req, res, next) => waf.use(req, res, next));
 | `xss.richHtmlBodyKeys` + `xss.sanitizeHtml` | For `mode: 'sanitize'`, sanitize rich HTML fields instead of only blocking. |
 
 **Rollout:** start with `mode: 'monitor'`, wire `auditLogger` and `metrics`, then switch to `block` or `sanitize` when false positives are acceptable.
+
+### Production rollout checklist
+
+1. Start with `mode: 'monitor'` in production-like traffic.
+2. Wire `auditLogger` and inspect top triggered rules/routes.
+3. Add route overrides with `policies` / `policyResolver` where needed.
+4. Tighten to `mode: 'block'` (or `sanitize` for rich HTML routes).
+5. Re-check after each ruleset/policy update (`rulesetVersion`, `policyVersion`).
+
+### False positive tuning checklist
+
+- Lower impact on known-safe routes with `pathAllowlist` or route `policies`.
+- Use `xss.allowlistedBodyKeys` / `xss.richHtmlBodyKeys` for rich text fields.
+- Keep `sqlInjection.sensitivity` at `balanced` initially; tighten only if needed.
+- Tune `inspectionLimits` to your payload profile (avoid excessive scan cost).
+- Use schema validation first (DTO/Zod) to reduce noisy inputs before WAF checks.
 
 ### NestJS `WafModule`
 
