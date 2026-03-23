@@ -22,3 +22,4 @@ function resolveEffectiveWafOptions(globalResolved, policies, policyResolver, ct
     }
     return opts;
 }
+//# sourceMappingURL=resolve-effective-options.js.map

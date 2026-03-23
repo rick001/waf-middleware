@@ -6,3 +6,4 @@ exports.RULESET_VERSION = void 0;
  * Override via `WafOptions.rulesetVersion` for audit correlation in forked builds.
  */
 exports.RULESET_VERSION = '2026.03';
+//# sourceMappingURL=ruleset-manifest.js.map

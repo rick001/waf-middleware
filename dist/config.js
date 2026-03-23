@@ -181,3 +181,4 @@ function resolvePolicyForRequest(req, globalResolved, policies) {
         return globalResolved;
     return mergeResolvedWafOptions(globalResolved, policy.overrides);
 }
+//# sourceMappingURL=config.js.map

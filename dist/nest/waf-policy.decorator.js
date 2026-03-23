@@ -10,3 +10,4 @@ exports.WAF_POLICY_KEY = 'wafPolicy';
  */
 const WafPolicy = (overrides) => (0, common_1.SetMetadata)(exports.WAF_POLICY_KEY, overrides);
 exports.WafPolicy = WafPolicy;
+//# sourceMappingURL=waf-policy.decorator.js.map

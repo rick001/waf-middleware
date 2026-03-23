@@ -147,3 +147,4 @@ function shouldSkipBodyKey(key, skipKeys) {
     const lower = key.toLowerCase();
     return skipKeys.some(s => lower.includes(s.toLowerCase()));
 }
+//# sourceMappingURL=sql-injection.js.map

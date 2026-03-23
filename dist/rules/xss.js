@@ -156,3 +156,4 @@ function walkSanitize(obj, pathPrefix, richHtmlBodyKeys, sanitizeHtml, limits, c
     }
     return changed;
 }
+//# sourceMappingURL=xss.js.map

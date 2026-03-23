@@ -142,3 +142,4 @@ function block(req, res, rule, opts) {
     audit(opts, req, { action: 'block', rule, reason: 'request_rejected' });
     res.status(opts.blockStatus).json({ message: opts.blockMessage });
 }
+//# sourceMappingURL=waf-engine.js.map

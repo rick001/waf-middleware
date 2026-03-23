@@ -23,7 +23,7 @@
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "build:test": "npm run clean && tsc -p tsconfig.json",
     "prepare": "npm run build",
-    "test": "npm run build:test && node --test \"dist/**/*.test.js\"",
+    "test": "npm run build:test && node scripts/run-tests.mjs",
     "bench:ci": "npm run build && node scripts/perf-gate.mjs"
   },
   "peerDependencies": {

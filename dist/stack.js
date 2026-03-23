@@ -38,3 +38,4 @@ function createRequestHardeningStack(options = {}) {
         });
     };
 }
+//# sourceMappingURL=stack.js.map

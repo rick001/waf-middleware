@@ -36,3 +36,4 @@ exports.WafMiddleware = WafMiddleware = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [Object])
 ], WafMiddleware);
+//# sourceMappingURL=waf.middleware.js.map

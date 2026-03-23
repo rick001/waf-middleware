@@ -111,3 +111,4 @@ function createFastifyWafPreHandlerWithMerge(base, mergeBeforeRequest) {
         });
     };
 }
+//# sourceMappingURL=fastify-waf.js.map
