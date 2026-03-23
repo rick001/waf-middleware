@@ -1,6 +1,6 @@
 {
   "name": "@rick001/http-waf-middleware",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "HTTP WAF-style request hardening for Express, NestJS, and Fastify: SQLi/XSS/path traversal heuristics, policies, audit events, and optional sanitize mode.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
