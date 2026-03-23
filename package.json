@@ -70,12 +70,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/waf-middleware.git"
+    "url": "git+https://github.com/rick001/waf-middleware.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/waf-middleware/issues"
+    "url": "https://github.com/rick001/waf-middleware/issues"
   },
-  "homepage": "https://github.com/your-username/waf-middleware#readme",
+  "homepage": "https://github.com/rick001/waf-middleware#readme",
   "engines": {
     "node": ">=16.0.0"
   }

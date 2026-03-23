@@ -301,8 +301,8 @@ app.use((req, res, next) => waf.use(req, res, next));
 ## Security behavior
 
 - **Passwords** – Body keys containing "password" (or names in `skipBodyKeys`) skip SQL injection checks so users can use any characters.
-- **Emails** – WAF does not validate email format; it only blocks values that contain obvious SQL fragments (e.g. `' OR 1=1`).
-- **Query/body** – Single alphanumeric tokens and common sort values (`asc`, `desc`) are allowed. High-confidence SQL patterns (e.g. `UNION SELECT`, `; DROP TABLE`, quote-based injection) are blocked.
+- **Emails** – WAF does not validate email format; it only blocks values that contain obvious SQL injection fragments (tautologies, stacked queries).
+- **Query/body** – Single alphanumeric tokens and common sort values (`asc`, `desc`) are allowed. High-confidence SQL patterns (union-based, stacked-query, and quote-based injection) are blocked.
 - **Sort/order** – Only explicitly allowlisted param names are validated; field names can include `.` and `-` by default.
 
 ---
