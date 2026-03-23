@@ -1,7 +1,13 @@
 # HTTP WAF middleware
 
-[![npm version](https://badge.fury.io/js/@rick001/http-waf-middleware.svg)](https://www.npmjs.com/package/@rick001/http-waf-middleware)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/@rick001%2Fhttp-waf-middleware.svg)](https://www.npmjs.com/package/@rick001/http-waf-middleware)
+[![npm downloads](https://img.shields.io/npm/dm/@rick001%2Fhttp-waf-middleware.svg)](https://www.npmjs.com/package/@rick001/http-waf-middleware)
+[![CI](https://github.com/rick001/waf-middleware/actions/workflows/ci.yml/badge.svg)](https://github.com/rick001/waf-middleware/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/npm/l/@rick001%2Fhttp-waf-middleware.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/node/v/@rick001%2Fhttp-waf-middleware.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![npm package minimized gzipped size](https://img.shields.io/bundlephobia/minzip/@rick001%2Fhttp-waf-middleware)](https://bundlephobia.com/package/@rick001%2Fhttp-waf-middleware)
+[![GitHub Repo stars](https://img.shields.io/github/stars/rick001/waf-middleware?style=social)](https://github.com/rick001/waf-middleware)
 
 A **request hardening and input validation middleware** for **NestJS/Express.js**, with schema-friendly validation hooks, sanitization, suspicious-input detection, and security integrations. It helps detect and harden against malicious input patterns (including SQLi/XSS-like payloads), but it is **not** a complete defense on its own.
 
@@ -52,9 +58,9 @@ Use this middleware as **one layer** in a broader defense-in-depth strategy, not
 ## Installation
 
 ```bash
-npm install http-waf-middleware
+npm install @rick001/http-waf-middleware
 # or
-yarn add http-waf-middleware
+yarn add @rick001/http-waf-middleware
 ```
 
 ---
